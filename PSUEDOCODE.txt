@@ -1,0 +1,215 @@
+PROGRAM ZEEMEDILIFE
+BEGIN
+	 FUNCTION main
+		DOWHILE (choice !=5)
+			PRINT 1) Insurance plan subscription
+			PRINT 2) Claim Processing
+			PRINT 3) Account information
+			PRINT 4) Search
+			PRINT 5) Exit
+			READ choice
+
+			IF choice==0
+				PRINT Invalid input, please try again
+			ELSE IF choice >5
+				PRINT Invalid input, please try again
+			ELSE IF choice == 1
+				RUN FUNCTION subscriberDetails
+			ELSE IF choice== 2
+				RUN FUNCTION claimProcess
+			ELSE IF choice == 3
+				RUN FUNCTION accountInformation
+			ELSE IF choice== 4
+				RUN FUNCTION search
+			END IF
+		ENDDO
+	ENDFUNCTION
+
+	FUNCTION subscriberDetails
+		OPEN FILE "details.txt"
+		OPEN FILE "claim.txt"
+
+		IF "detail.txt" OR "claim.txt" ==NULL
+			PRINT File not found
+			EXIT
+		ELSE
+			COUNT number of lines IN "details.txt"
+		ENDIF
+
+		PRINT Enter age
+		READ age
+
+		DOWHILE (age !=000)
+			IF age>55
+				PRINT Ineligible for the service
+				EXIT
+			ELSE IF age=0
+				PRINT Enter age in days
+				READ babyAge
+				
+				IF babyAge < 15
+					PRINT Not eligible
+				ELSE
+					SHOW 3 types of PLANS AND PROMPT for input
+					READ choice
+				END IF
+			ELSE IF 0>age<21
+				SHOW 3 types of PLANS AND PROMPT for input
+				READ choice
+			ELSE IF 20>age<41
+				SHOW 2 types of PLANS AND PROMPT for input
+				READ choice
+			ELSE IF age>40
+				SHOW 1 PLAN AND PROMPT for input
+				READ choice
+			END IF
+			
+			PRINT Enter subscription type (Annual/Lifetime)
+			READ type
+
+			PRINT Name: , contact no: , address:, history:
+			READ name, contactno, address and history
+			PRINT name, id, age, contact no, choice, type, contact no, address, history
+			PRINT STRUCTURE DETAIL TO "details.txt" AND STRUCTURE CLAIM TO "claim.txt"
+		ENDDO
+	ENDFUNCTION
+
+	FUNCTION claimProcess
+		"OPEN FILE "details.txt"
+		"OPEN FILE "claim.txt"
+
+		IF "detail.txt" OR "claim.txt" ==NULL
+			PRINT File not found
+			EXIT
+		ELSE
+			COUNT number of lines IN "details.txt"
+		ENDIF
+
+		PRINT Enter ID
+		READ id
+
+		FOR j=0;j<COUNT;j+1
+			IF ID from FILE =id
+				FLAG=TRUE
+		ENDDO
+		IF FLAG=FALSE
+			PRINT subscriber/ID does not exist
+			EXIT
+		END IF
+
+		DOWHILE FLAG==TRUE
+			PRINT Type of room stayed. ICU or Normal
+			READ roomtype
+
+			IF roomtype==ICU
+				PRINT Enter days stayed in room
+				READ days
+			ELSE IF roomtype= Normal
+				PRINT Enter Enter days stayed in room
+				READ days
+			END IF
+
+			PRINT  Enter cost of supplies and service
+			READ ssCost
+			PRINT Enter Surgical fees
+			READ sFees
+			PRINT Enter other fees
+			READ other
+
+			claimAmount = (roomtype*days) + ssCost + sFees + other
+			PRINT claimAmount
+
+			PRINT CLAIM STRUCTURE TO FILE "claim.txt"
+		ENDDO
+	ENDFUNCTION
+
+	FUNCTION accountInformation
+		"OPEN FILE "claim.txt"
+
+		IF "claim.txt" ==NULL
+			PRINT File not found
+			EXIT
+		ELSE
+			COUNT number of lines IN "claim.txt"
+		ENDIF
+
+		PRINT 1. Total amount claimed by lifetime subscribers 
+		PRINT 2. Annula claim subscribers with exhausted amounts
+		READ selection
+
+		IF selection = 1
+			FOR k=0;k<COUNT;k+1
+				IF type==1
+					totalAmount += claimAmount
+				ENDIF
+			ENDDO
+			PRINT totalAmount
+		ELSE IF selection=2
+			FOR k=0;k<COUNT;k+1
+				IF type==2 AND remainingAmount=0
+					n++
+				ENDIF
+			PRINT n
+		ENDIF
+	ENDFUNCTION
+
+	FUNCTION search
+		"OPEN FILE "details.txt"
+		"OPEN FILE "claim.txt"
+
+		IF "detail.txt" OR "claim.txt" ==NULL
+			PRINT File not found
+			EXIT
+		ELSE
+			COUNT number of lines IN "details.txt"
+		ENDIF
+
+		PRINT Search by 1. ID 2. name 3. plan 4. claim limit 5. age
+		READ choice
+
+		IF choice ==1
+			PRINT Enter ID
+			READ id
+			FOR k=0;k<COUNT;k+1
+				IF ID from file==id
+					PRINT STRUCTURE of detail AND claim
+				ENDIF
+			ENDDO
+		ELSE IF choice ==2
+			PRINT Enter name
+			READ name
+			FOR k=0;k<COUNT;k+1
+				IF NAME from file==name
+					PRINT STRUCTURE of detail AND claim
+				ENDIF
+			ENDDO
+		ELSE IF choice ==3
+			PRINT Plan type
+			READ plan
+			k=0
+			DOWHILE k < COUNT; k+1
+				IF PLAN from file==plan
+					PRINT STRUCTURE of detail AND claim
+				ENDIF
+			ENDDO
+		ELSE IF choice ==4
+			PRINT Enter claim limit
+			READ cLimit
+			k=0
+			DOWHILE k < COUNT; k+1
+				IF CLAIM LIMIT from file==cLimit
+					PRINT STRUCTURE of detail AND claim
+				ENDIF
+			ENDDO
+		ELSE IF choice ==5
+			PRINT Enter age
+			READ age
+			k=0
+			DOWHILE k < COUNT; k+1
+				IF AGE from file==age
+					PRINT STRUCTURE of detail AND claim
+				ENDIF
+			ENDDO
+		ENDIF
+	ENDFUNCTION
+END

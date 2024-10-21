@@ -1,0 +1,18 @@
+Chloe Willis	16	000	3	1	0986766343	Goff Avenue	Grand Rapids	MI	None
+Laiba Yuan	40	001	2	2	077984565	Murry St	Viriginia West	VA	Type 1 Diabetes
+Thea Sandoval	12	002	3	2	0876647544	Wildwood St	Barberton	OH	None
+Ravi Khan	53	003	1	1	0776555345	Clement St	Atalanta	GA	Heart Attack
+Jean-Paul	2	004	2	2	----------	Marie Street	Chesapeake	MD	None
+Steve Jobs	19	005	1	1	0864587547	Grant St	Texarkana	TX	Broken right arm & leg
+Li Zimmers	38	006	1	2	0774534298	Mount Street	Sagnawki	MI	Appendicitis
+Saphire Diaz	47	007	1	2	0776454231	Simpson Sq	Clintona	OK	Asthma
+Maha Nelson	23	008	1	1	0887634529	Sheila Lane	Falonville	NV	Type 2 Diabetes
+Naeem Perry	8	009	2	2	0115634429	Fleming Way	Chesteroo	TZ	None
+Jen Snyder	45	010	1	1	0776549897	Olympio St	Upangaso	DS	Dystonia, Insomnia
+Demi Peel	50	011	1	2	0997523314	Trymore Rd	Mankatosaa	MN	Kidney stones, Measles, Obesity
+Darth Maul	20	012	1	1	0223144567	Galactic Rd	Tattoine	SW	None
+Kia Cortez	49	013	1	2	0223455672	Green St	Franklin	TN	Hear Loss
+Labile Pogba	27	014	2	2	0887694321	Busby Street	Manchester	MU	None
+Rizwan Okn	22	015	2	1	0997656674	Johnny Lane	Milwaukee	ZI	Obesity
+Ash Fernandez	39	016	1	1	0664553241	Doe Meadow Dv	Annapolis Jcn	AK	Post-traumatic stress disorder
+Scott Ryder	44	017	1	1	0117654997	Abbey Road	Westminister	NG	Liver Cirrhosis
