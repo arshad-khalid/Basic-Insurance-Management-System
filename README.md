@@ -6,7 +6,7 @@ This system, implemented in C, will help manage subscriptions, claims, and accou
 
 ## Insurance Plans
 
-### Assumed Plans and Benefits
+## Assumed Plans and Benefits
 
 | Plan      | Monthly Premium (RM) | Annual Claim Limit (RM) | Lifetime Claim Limit (RM) |
 |-----------|-----------------------|-------------------------|----------------------------|
@@ -33,25 +33,25 @@ This system, implemented in C, will help manage subscriptions, claims, and accou
 
 ## Features Implemented
 
-### 1. Insurance Plan Subscription
-- **User Input**: Prompt for age, display eligible plans and benefits.
-- **Claim Limit Type**: Choose between Annual and Lifetime.
-- **Subscriber Details**: Collect name, contact number, address, health history.
-- **Unique ID**: Generate a sequential subscriber ID.
-- **Data Storage**: Save subscriber details in a text file.
+## 1. Insurance Plan Subscription
+- User Input: Prompt for age, display eligible plans and benefits.
+- Claim Limit Type: Choose between Annual and Lifetime.
+- Subscriber Details: Collect name, contact number, address, health history.
+- Unique ID*: Generate a sequential subscriber ID.
+- Data Storage: Save subscriber details in a text file.
 
-### 2. Claim Processing
-- **Claim Submission**: Allow users to submit claims.
-- **Claim Details**: Input for hospitalization duration, costs, etc.
-- **Eligibility Check**: Validate claims against subscriber limits.
-- **Record Keeping**: Maintain records of claims and balance amounts.
+## 2. Claim Processing
+- Claim Submission: Allow users to submit claims.
+- Claim Details: Input for hospitalization duration, costs, etc.
+- Eligibility Check: Validate claims against subscriber limits.
+- Record Keeping: Maintain records of claims and balance amounts.
 
-### 3. Accounts Information
-- **Total Claims**: Display total amount claimed by Lifetime Claim Limit subscribers.
-- **Exhausted Claims**: Count Annual Claim Limit subscribers who have exhausted their claims.
+## 3. Accounts Information
+- Total Claims: Display total amount claimed by Lifetime Claim Limit subscribers.
+- Exhausted Claims: Count Annual Claim Limit subscribers who have exhausted their claims.
 
-### 4. Searching Functionalities
-- **Search Options**:
+## 4. Searching Functionalities
+- Search Options:
   - By Subscriber ID or name.
   - By Plan, claim limit type, and age.
 
